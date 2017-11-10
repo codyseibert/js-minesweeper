@@ -1,3 +1,48 @@
 body {
   font-family: 'Inconsolata', monospace;
+  text-align: center;
+}
+
+#board {
+  border: 1px solid #333;
+  display: inline-block;
+}
+
+.row {
+  font-size: 0px;
+}
+
+.col {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  vertical-align: top;
+  color: black;
+  font-size: 20px;
+  line-height: 50px;
+  transition: all 1.0s;
+}
+
+/* .col.hidden.mine {
+  background-color: red;
+} */
+
+.col.hidden {
+  background-color: #59aec7;
+  cursor: pointer;
+}
+
+.col.hidden:hover {
+  background-color: #eee;
+}
+
+.row:last-child .col {
+  border-bottom: none;
+}
+
+.row .col:last-child {
+  border-right: none;
 }
